@@ -18,17 +18,15 @@ def squareRootBi(x, epsilon):
 
 squareRootBi(0.25, 0.0001)
 
-#speed of convergence
-sqrt(x)
-f(guess) = guess62 - x
+f(guess) = guess^2 - x
 f(guess) = 0
-
-value near the right answer
-slope of the guess of tengent?
-dy/dx
-
-f'(guess) = 2*guess 
-guess' = guess - f(guess)/2guess
-f(3) = 3^2 -16 = -7
-guess(i+1) = 3 - (-7/6) = 4.1666 use 4.1666 as guess(i)
-
+guess ** 2 - 16: what we looking for here is when the curve is cross with x axis
+the basic idea is that you take a guess, and you find the tangent(切线） of the guess
+let's take the guess 3, and tangent of the curve at 3.  The next guess will be where the tangent crosses the x axis.
+the utility of this rely upon the observation that most of time, the tangent line is a good approximation to the curve for values near the solution. 
+Therefore the x intersect of the tangent will be closer to right answer than the current guess
+How could we find the intersect of tangent?
+This is where the derivative comes in. 
+The slope of the tangent is given by the first derivative of the function f at the point of the guess.
+The derivative of i'th guess is equal to two times the i'th guess (f'(guess) = 2 * guess)
+Guess i+1 to be equal to guess i minus the new guess of the old guess divided by twice the old guess
