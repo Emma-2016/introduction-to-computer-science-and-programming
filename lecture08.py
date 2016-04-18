@@ -68,7 +68,42 @@ def Towers(size, fromStack, toStack, spareStack):
 #Quadratic algorithm tend to have this doubly-nested, triply-nested things are likely to be quadratic or cubic algorithms.
 #exponent algorithm when reduce the problem of one size into two or more sub-problem of a smaller size.
 
+def search(s, e):
+    answer = None
+    i = 0
+    numCompute = 0
+    while i < len(s) and answer == None:
+        numCompute += 1
+        if e == s[i]:
+            answer = True
+        elif e < s[i]:
+            answer = False
+        i += 1
+    print answer, numCompute
+#In the worest case, O(len(s)), even though e in the first half of the list
 
+def biSearch(s, e, first, last):
+    print first, last
+    if (last - first) < 2: return s[first] == e or s[last] == e
+    mid = fisrt + (last - first)/2
+    if s[mid] == e: return True
+    if s[mid] > e: return biSearch(s, e, first, mid - 1)
+    return biSearch(s, e, mid + 1, last)
+def search1(s, e)
+    print (s, e, 0, len(s)-1)
+    print 'Search complete'
+
+#how long it take to access the n-th element?
+#random access, as long as knowing the location, it takes a constant amout of time to get to that point.
+#if I knew the lists were made of just integers, it's be reaaly easy to figure it out(the beginning + 4i unit). Another way of saying it is, this takes constant amount of time to figure out where to look
+#it takes constant amount of time to get there.
+#so in fact I could treat indexing into a list being a basic operation.
+#however in general list?
+#linked-list, the time it takes will be linear in the length of the list
+#an alternative is to have each one of the successive cells in memory point off to the actual value, which will take up some arbitrary amout of memory.
+#this is constant access;
+#in python, most implementation in python use this way of storing list;
+#we have to be careful what is a primitive step
 
 
 
