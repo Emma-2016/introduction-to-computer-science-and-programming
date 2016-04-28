@@ -59,3 +59,22 @@ print'Now print', bubble(s)
 #the complexity of both algorithm is n^2, while n is the length of the list.
 #However, the bubble algorithm swap every time
 #the selection algorithm swap only once each loop
+
+#Another version of bubble:
+def bubble(s):
+    swap = True
+    while swap:
+        swap = False
+        for j in range(len(s) - 1): 
+            if s[j] > s[j+1]:
+                tmp = s[j]
+                s[j] = s[j+1]
+                s[j+1] = tmp
+                swap = True
+        print s
+    return s
+s = [1, 8, 6, 4, 2, 3, 9, 5]
+print 'The original list is ', s
+print'Now print', bubble(s)
+
+#Even with this version, the complexity is n^2, because we are looking for the worst case.
