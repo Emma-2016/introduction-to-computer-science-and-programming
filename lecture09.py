@@ -45,9 +45,7 @@ print'Now print', selection(s)
 #bubble
 def bubble(s):
     for i in range(len(s)): #each loop send the biggest element to the last
-        for j in range(len(s) - 1): #some element may get suck in the middle, cause the el
-elment is bigger than it; however the bigger element will continue to be sent to latter pa
-rt. And the sucked element may be sent at the next loop i
+        for j in range(len(s) - 1): #some element may get suck in the middle, cause the elelment is bigger than it; however the bigger element will continue to be sent to latter part. And the sucked element may be sent at the next loop i
             if s[j] > s[j+1]:
                 tmp = s[j]
                 s[j] = s[j+1]
@@ -57,3 +55,7 @@ rt. And the sucked element may be sent at the next loop i
 s = [1, 8, 6, 4, 2, 3, 9, 5]
 print 'The original list is ', s
 print'Now print', bubble(s)
+
+#the complexity of both algorithm is n^2, while n is the length of the list.
+#However, the bubble algorithm swap every time
+#the selection algorithm swap only once each loop
