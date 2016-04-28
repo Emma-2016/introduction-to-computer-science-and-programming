@@ -21,3 +21,39 @@
 #the loop begins with the prefix being nothing and it keeps increasing the size of prefix by 1 until it gets through the entire list, at which point there's nothing in the suffix and the entire prefix is sorted.
 
 #Devide conquer algorithm
+
+
+
+#selection algorithm:
+def selection(s):
+    for i in range(len(s)):
+        minIndex = i
+        minValue = s[i]
+        tmp = s[i]
+        for j in range(i, len(s)):
+            if minValue > s[j]:
+                minIndex = j
+                minValue = s[j]
+                tmp = s[i]
+        s[i] = s[minIndex]
+        s[minIndex] = tmp
+        print s #To see how it actually work
+    return s
+s = [1, 8, 6, 4, 2, 3, 9, 5]
+print'Now print', selection(s)
+
+#bubble
+def bubble(s):
+    for i in range(len(s)): #each loop send the biggest element to the last
+        for j in range(len(s) - 1): #some element may get suck in the middle, cause the el
+elment is bigger than it; however the bigger element will continue to be sent to latter pa
+rt. And the sucked element may be sent at the next loop i
+            if s[j] > s[j+1]:
+                tmp = s[j]
+                s[j] = s[j+1]
+                s[j+1] = tmp
+        #print s
+    return s
+s = [1, 8, 6, 4, 2, 3, 9, 5]
+print 'The original list is ', s
+print'Now print', bubble(s)
