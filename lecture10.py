@@ -44,4 +44,31 @@ print merSort(s)
 #easy to divide and not complicated in combination
 
 #hashing
-#hash has some kind of technique to map any kind of subject into integer
+#hash has some kind of technique to map any kind of data into integer
+def hashChar(e):
+    return ord(e)   #only single character; hash map any charater into a rage zero to 255, that is why the length of cSet is 256.
+
+def cSetCreate():
+    cSet = []
+    for i in range(0, 255): cSet.append(None)
+    return cSet
+
+def cSetInsert(cSet, e):
+    cSet[hashChar(e)] = 1   
+
+def cSetMember(cSet, e):
+    return cSet[hashChar(e)] == 1
+
+cSet = cSetCreate()
+cSetInsert(cSet, 'c')
+print cSetMember(cSet, 'c')
+
+#python built-in function ord() map any character into interget.
+#if you want other type of data map to character, you need other function that function as ord()
+#If you want to represent set of strings, well you basically just generalize the hash function.
+#It is simply the same idea that you have a mapping from your input into a set of integers.
+#This is a trade off between time and space. constant time access when doing search is great.
+#how to grantee(?) a hash function takes any input into exactly one spot in the store space. The answer is we can not do that.
+#It is hard to design a hash function that has completely even distribution meaning that it takes any input into exactly one output spot.
+#try to use a function that spread things out pretty evenly. But the place you store into in those lists may have to themselves have a small list in it.
+#hash function is hard to create
