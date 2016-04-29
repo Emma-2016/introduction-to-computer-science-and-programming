@@ -72,3 +72,11 @@ print cSetMember(cSet, 'c')
 #It is hard to design a hash function that has completely even distribution meaning that it takes any input into exactly one output spot.
 #try to use a function that spread things out pretty evenly. But the place you store into in those lists may have to themselves have a small list in it.
 #hash function is hard to create
+
+#Assert indicates here are some conditions to test. If they're true, I'm going to let the rest of the code run. If not, I'm going to throw an error. 
+#So the assertion is basically saying we got some pre-conditions, those are the clauses inside the assert that have to be true, and there's a post condition.
+#What the assert is saying, or rather the programmer is saying, if you give me input that satisfies the preconditions, I'm guaranteering to you that my code is going to give you something that meets th epost condition.
+#Asserts in fact are nice in the sense that they let you check conditions at debugging time or testing time.
+#So you can use them to see where your code is going.
+#An exception, when you use an exception, you are basically saying, you can do anything you want with my code, and you can be sure that I am going to tell you if something is going wrong.
+#And I am going to handle it myself as much as possible. Exceptions are going to handle unexpected things.
