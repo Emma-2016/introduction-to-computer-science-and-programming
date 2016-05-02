@@ -1,0 +1,32 @@
+#Reversed order of arguments #?meaning arguments that pass to a function with wrong order?
+#Spelling
+#Initialization #particularly loop
+#Object VS. value equality #particular "=="
+#Aliasing -- deep or shallow copy #two different ways to get to the same object 
+#Side affect -- when you call a function
+
+#Keep record of what you have tried
+#Reconsider your assumption #you thought you are running the program you have just code, which is not
+#Debug code, not the comment
+#Get help, try to explain your program to others
+#Walk away and take a break and see it in flesh eyes
+
+#Haste makes waste
+#Think before you actually make the change in code, what it may break when you are trying to fix something.
+#Code should not always grow, tide things up.
+#Make sure that you can reverse. Save your old version.
+
+#taking a problem and finding some way to formulate the problem so that we can use computing to help us to get an answer.
+#A class of problems known as optimization problems.
+#Two part. Some function that you're either attempting to maximize or minize the value of.
+#And some set of constrains that must be honored.
+#shortest path problem, Traveling saleperson problem, Bin packing prblem, Sequence alignment problem, knapsack problem
+#problem reduction, take a new problem and map it on an old problem.
+
+#Continue knapsack problem
+#greedy algorithm -- in every step, you do what maximizes your value at that step, there is no planning ahead, just do whatever is best.
+#locally optimal decisions do not always lead to global optimums.
+#zero-one knapsack problem - discrete version
+#The first step in problem reduction -- to go from a problem that has a bunch of words, and try and write it down as a nice, tight mathematical formulation.
+#dynamic programming -- you are looking situtation where there are overlapping sub-problems and whats's called optimal substructure.
+
