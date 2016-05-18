@@ -12,8 +12,6 @@ n = 6
 result = fib(n)
 print 'fib of', n, '=', result, 'number of calls =', count
 
-
-
 #memoization:recaord the value the first time we calculate it, look it up subsequently (when we need it);
 def fib1(n):
     memo = {1:1, 0:1}
@@ -46,7 +44,8 @@ def maxVal(w, v, i, a_w):
 	if w[i] > a_w:
 		return without_i
 	else:
-		with_i = v[i] + maxVal(w, v, i-1, a_w-w[i])
+		with_i = v[i] + maxVal(w, v, i-1, a_w-w[i])	
+##with i or not will lead to different way of calculating the subseqeunt subjects. Here recursively calculate the max value, not the without_i!
 	return max(with_i, without_i)
 
 weights = [1, 5, 3, 4]
