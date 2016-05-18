@@ -79,3 +79,8 @@ def fast_maxVal(w, v, i, a_w, m):
 		result = max(with_i, without_i)
 		m[(i, a_w)] = result
 		return result
+
+# Trading time for space.
+# Don't be intimidated by exponential problem.
+# Dynamic programming is broadly useful.
+# Problem reduction.
