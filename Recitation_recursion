@@ -27,3 +27,25 @@ def hanoi(n, s, t, b):
 
 When doing recursion, you can think it in two ways. One is to start thinking how to express this problem in simpler version, like how you thought about the Fibonacci series.
 The other is to start from its base case, the most fundamental situation. For instance, the Hanoi problem. It is from n equal to 1.
+
+
+
+
+
+def rec_mult(m, n):
+  if n == 0:return 0
+  elif n >= 1:
+    return m + rec_mult(m, n-1)
+  elif n <= -1:
+    return -m + rec_mult(m, n+1)
+
+def is_prime(n):
+  if n <= 3:
+    if n == 2 or n == 3: return True
+    else: return False
+  else:
+    for divisor in range(2, int(n ** 0.5)+1):
+      if  n % divisor == 0:
+        return False
+    #If none of the divisors go in evenly n must be prime  
+    return True
