@@ -1,0 +1,29 @@
+The principle of recursion: You have a problem, try to express the problem in a simpler version of the same problem.
+e.g: If you want to find factorial n, try to express it in terms of (n-1). Keep doing this until you come to factorial 1 for which you know the explicit ansewr.
+
+Tow parts in recursion. The first is base case, and the second is recursive case.
+
+for factorial_function(n):
+Base case: n = 0: return 1; n = 1: return 1
+since we can express 1 in terms of 0, we actually donot need n = 1.
+Because your recursive function only depends on its previous value. So you need only one value in advance.
+Fibonacci recursive function need two previous value. So its base case point to two numbers.
+Recursive : return n * factorial_function(n-1)
+
+
+def rec_exponentiation(b, e):
+  if e == 0:
+    return 1
+  else:
+    return b * rec_exponentiation(b, e-1)
+    
+#Hanoi problem:
+def hanoi(n, s, t, b):
+  if n == 1: print "move", s, "to", t
+  else:
+    hanoi(n-1, s, b, t) #You don't have to worry how you actually do that, just move them to the buffer.
+    hanoi(1, s, t, b)
+    hanoi(n-1, b, t, s)
+
+When doing recursion, you can think it in two ways. One is to start thinking how to express this problem in simpler version, like how you thought about the Fibonacci series.
+The other is to start from its base case, the most fundamental situation. For instance, the Hanoi problem. It is from n equal to 1.
