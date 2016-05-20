@@ -1,5 +1,5 @@
-Class - template to create instance of object.
-Instance has some internal attributes.
+# Class - template to create instance of object.
+# Instance has some internal attributes.
 
 class cartesianPoint:
   pass
@@ -18,8 +18,8 @@ def printPoint(p):
   print '(' + str(p.x) + ', ' + str(p.y) + ')'
   
   
-shallow equality -- 'is': given two things, do they point to exactly the same reference? (object)
-deep equality -- we can define. (value)
+# shallow equality -- 'is': given two things, do they point to exactly the same reference? (object)
+# deep equality -- we can define. (value)
 
 
 class cPoint():
@@ -39,9 +39,19 @@ class cPoint():
     return (self.x, self.y)
   def polar(self):
     return (self.radius, self.angle)
-  def __str__(self):
+  def __str__(self): #print repretation
     return '(' + str(self.x) + ', ' + str(self.y) + ')'
   def __cmp__(self, other):
-    reutn (self.x > other.x) and (self.y > other.y)
+    return (self.x > other.x) and (self.y > other.y)
     
 #data hidding - one can only access instance values through defined methods. Python does not do this.
+# operator overloading
+
+
+class Segment():
+  def __init__(self, start, end):
+    self.start = start
+    self.end = end
+  def length(self):
+    return ((self.start.x - self.end.x) ** 2 + (self.start.y - self.end.y) ** 2) ** 0.5
+    #in fact, one should access the value through a defined method.
