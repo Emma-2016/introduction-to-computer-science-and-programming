@@ -42,7 +42,7 @@ class cPoint():
   def __str__(self): #print repretation
     return '(' + str(self.x) + ', ' + str(self.y) + ')'
   def __cmp__(self, other):
-    return (self.x > other.x) and (self.y > other.y)
+    return cmp(self.x, other.x) and cmp(self.y, other.y)
     
 #data hidding - one can only access instance values through defined methods. Python does not do this.
 # operator overloading
