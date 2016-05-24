@@ -31,7 +31,7 @@ class Field(object):
 		self.drunk = drunk
 		self.loc = loc
 	def move(self, cp, dist):
-		oldLod = self.loc
+		oldLoc = self.loc
 		xc, yc = cp.move(dist)
 		self.loc = oldLoc.move(xc, yc)
 	def getLoc(self):
