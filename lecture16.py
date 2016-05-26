@@ -58,7 +58,7 @@ class PROF(MITperson):
 		try:
 			self.teaching[term].append(subj)
 		except KeyError:
-			self.teaching[term] = subj
+			self.teaching[term] = [subj]
 	def getTeaching(self, term):
 		try:
 			return self.teaching[term]
